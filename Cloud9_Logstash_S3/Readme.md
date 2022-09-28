@@ -1,1 +1,1 @@
-# Send Logs from Logstash running on Cloud9 to S3
+# Send logs from Logstash running on Cloud9 to S3
