@@ -3,7 +3,8 @@ Follow the instructions below
 
 1. Run the CloudFormation stack below. It will create the required resources required for this example
 
-[![Launch CloudFormation Stack](https://sharkech-public.s3.amazonaws.com/misc-public/cloudformation-launch-stack.png)]()
+[![Launch CloudFormation Stack](https://sharkech-public.s3.amazonaws.com/misc-public/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=dynamo-lambda-opensearch&templateURL=https://sharkech-public.s3.amazonaws.com/misc-public/
+logstash_cloud9_s3.yaml)
 
 The resources created by the CloudFormation stack are documented in the architecture below
 
