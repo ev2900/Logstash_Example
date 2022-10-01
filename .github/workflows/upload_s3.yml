@@ -28,5 +28,5 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
           
-      - name: Upload msk_cluster.yaml to S3
-        run: aws s3 cp /home/runner/work/DynamoDB_OpenSearch_Example/DynamoDB_OpenSearch_Example/dynamo_lambda_opensearch.yaml s3://sharkech-public/misc-public/dynamo_lambda_opensearch.yaml
+      - name: Upload logstash_cloud9_s3.yaml  to S3
+        run: aws s3 cp /home/runner/work/Logstash_Examples/Logstash_Examples/logstash_cloud9_s3.yaml s3://sharkech-public/misc-public/logstash_cloud9_s3.yaml
