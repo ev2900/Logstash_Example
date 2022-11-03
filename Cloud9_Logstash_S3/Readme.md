@@ -46,3 +46,12 @@ output {
 4. Run Logstash
 
 ```/home/ec2-user/environment/logstash-7.16.2/bin/logstash -f /home/ec2-user/environment/logstash-config.conf```
+
+5. Add logs to the log file / folder specified by the path. If you need sample log data you can use the following
+
+```
+{"timestamp":1661869220203, "CPU": 90, "Message": "High CPU"}
+{"timestamp":1661869220203, "Memory": 90, "Message": "High Memory"}
+{"timestamp":1661869220203, "Disk": 80, "Message": "High Disk"}
+{"timestamp":1661869220203, "Network": 100, "Message": "High Network"}
+```
