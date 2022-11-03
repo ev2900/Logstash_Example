@@ -11,24 +11,38 @@ The resources created by the CloudFormation stack are documented in the architec
 
 2. Open the Cloud9 environment and install Logstash. Complete all of the subsequent steps in the Cloud9 terminal
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2a. ```sudo rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch```
+Download logstash
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2b. ```sudo vim /etc/yum.repos.d/logstash.repo```
+```curl https://artifacts.opensearch.org/logstash/logstash-oss-with-opensearch-output-plugin-7.16.2-linux-x64.tar.gz -o logstash-oss-with-opensearch-output-plugin-7.16.2-linux-x64.tar.gz```
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2c. In the file that was created and opened in step 2b copy, paste the following for the content of the file
-```
-[logstash-8.x]
-name=Elastic repository for 8.x packages
-baseurl=https://artifacts.elastic.co/packages/8.x/yum
-gpgcheck=1
-gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch
-enabled=1
-autorefresh=1
-type=rpm-md
-```
+Uncompress download
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2d. ```sudo yum install logstash```
+```tar -zxvf logstash-oss-with-opensearch-output-plugin-7.16.2-linux-x64.tar.gz```
 
 3. Configure Logstash
 
+Create configuration file 
+
+```sudo vim logstash-config.conf```
+
+Copy / paste the following into the the ```logstash-config.conf``` file. Replace the *path*, *hosts*, *user*, *password* parts of the config
+
+```
+input {
+    file {
+        path => "<path_to_log_file>"
+        start_position => "beginning"
+    }
+}
+output {
+    opensearch {
+        hosts       => ["<opensearch_domain_endpoint>:443"]
+        user        => "<opensearch_user_name>"
+        password    => "<opensearch_password>"
+        index       => "logstash-logs-%{+YYYY.MM.dd}"
+    }
+}
+```
 4. Run Logstash
+
+```/home/ec2-user/environment/logstash-7.16.2/bin/logstash -f /home/ec2-user/environment/logstash-config.conf```
