@@ -7,7 +7,9 @@ Follow the instructions below
 
 The resources created by the CloudFormation stack are documented in the architecture below
 
-</br></br></br>
+<img width="650" alt="Fluentd_cloud9_Architecture" src="https://github.com/ev2900/Logstash_Examples/blob/main/Architecture/architecture-logstash_cloud9_s3.png">
+
+</br>
 
 2. Open the Cloud9 environment and install Logstash. Complete all of the subsequent steps in the Cloud9 terminal
 
