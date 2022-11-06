@@ -1,4 +1,4 @@
-# Send logs from Logstash running on Cloud9 to OpenSearch
+# Send logs from Logstash on Cloud9 to OpenSearch
 Follow the instructions below
 
 1. Run the CloudFormation stack below. It will create the required resources required for this example
