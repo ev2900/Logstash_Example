@@ -51,6 +51,8 @@ output {
 
 5. Add logs to the log file / folder specified by the path. If you need sample log data you can use the following
 
+*Note* you made need to modify the premisions on the log file via. ```chmod 777 logstash-config.conf```
+
 ```
 {"timestamp":1661869220203, "CPU": 90, "Message": "High CPU"}
 {"timestamp":1661869220203, "Memory": 90, "Message": "High Memory"}
