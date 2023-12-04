@@ -1,4 +1,7 @@
 # Send logs from Logstash on Cloud9 to OpenSearch
+
+<img width="85" alt="map-user" src="https://img.shields.io/badge/views-0000-green"> <img width="125" alt="map-user" src="https://img.shields.io/badge/unique visits-0000-green">
+
 Follow the instructions below
 
 1. Run the CloudFormation stack below. It will create the required resources required for this example
