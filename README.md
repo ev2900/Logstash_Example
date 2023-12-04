@@ -1,6 +1,6 @@
 # Send logs from Logstash on Cloud9 to OpenSearch
 
-<img width="85" alt="map-user" src="https://img.shields.io/badge/views-0000-green"> <img width="125" alt="map-user" src="https://img.shields.io/badge/unique visits-0000-green">
+<img width="85" alt="map-user" src="https://img.shields.io/badge/views-026-green"> <img width="125" alt="map-user" src="https://img.shields.io/badge/unique visits-0000-green">
 
 Follow the instructions below
 
@@ -26,7 +26,7 @@ Uncompress download
 
 3. Configure Logstash
 
-Create configuration file 
+Create configuration file
 
 ```sudo vim logstash-config.conf```
 
